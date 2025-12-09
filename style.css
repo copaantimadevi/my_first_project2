@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  /* -------------------- HEADER -------------------- */
+  .navbar {
+    width: 100%;
+    background: #222;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #00aaff;
+  }
+
+  /* Hamburger (hidden on large screens) */
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* ----------- MOBILE RESPONSIVE NAVBAR ----------- */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 230px;
+      background: #222;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+      display: none;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+      display: flex;
+    }
+  }
+
+  /* -------------------- FOOTER -------------------- */
+  footer {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 50px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-box {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-column {
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+  }
+
+  .footer-column h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #00aaff;
+  }
+
+  .footer-column p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .developer-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00aaff;
+    margin-bottom: 10px;
+    object-fit: cover;
+  }
+
+  /* Footer responsive */
+  @media (max-width: 768px) {
+    .footer-column {
+      width: 100%;
+    }
+  }

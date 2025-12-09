@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form</title>
+<link rel="stylesheet" href="./style.css">
+  <style>
+    /* FORM PAGE ONLY — NO NAVBAR/FOOTER CSS */
+
+    .form-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px;
+      background: #f2f6ff;
+    }
+
+    .main {
+      width: 100%;
+      max-width: 480px;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-top: 6px solid #3b82f6;
+    }
+
+    .main h3 {
+      text-align: center;
+      font-size: 26px;
+      color: #1e3a8a;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .inputbox {
+      margin-bottom: 18px;
+    }
+
+    .inputbox label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1e293b;
+    }
+
+    .inputbox input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .inputbox input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 5px rgba(59,130,246,0.4);
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      width: 48%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .submit-btn {
+      background: #3b82f6;
+      color: white;
+    }
+    .submit-btn:hover {
+      background: #2563eb;
+    }
+
+    .reset-btn {
+      background: #e11d48;
+      color: white;
+    }
+    .reset-btn:hover {
+      background: #be123c;
+    }
+
+    @media (max-width: 480px) {
+      .button-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .button-group button {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ONLY THE FORM — NO NAVBAR/FOOTER -->
+ <nav class="navbar">
+    <div class="logo">
+      <img src="./imags/OIP (2).webp" alt="Logo" />
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="form-container">
+    <div class="main">
+      <form>
+        <h3>Student Registration Form</h3>
+
+        <div class="inputbox">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="inputbox">
+          <label for="father">Father's Name</label>
+          <input type="text" id="father" placeholder="Enter your father's name" required>
+        </div>
+
+        <div class="inputbox">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="inputbox">
+          <label for="number">Phone Number</label>
+          <input type="number" id="number" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="submit-btn">Submit</button>
+          <button type="reset" class="reset-btn">Reset</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+<footer>
+    <div class="footer-box">
+      <div class="footer-column">
+        <h2>Contact</h2>
+        <p>📞 9313062443</p>
+        <p>📧 antima25062004@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <img src="./imags/iti.jpeg" class="developer-img" />
+        <h2>Developed By</h2>
+        <p>ANTIMA DEVI</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Address</h2>
+        <p>JS ITI Varanasi</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

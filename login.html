@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    /* LOGIN FORM ONLY (Navbar/Footer untouched) */
+
+    .login-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 60px 20px;
+      background: #eef3ff;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      border-top: 6px solid #3b82f6;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #1e3a8a;
+      font-weight: 700;
+    }
+
+    .input-field {
+      margin-bottom: 18px;
+    }
+
+    .input-field label {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #1f2937;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .input-field input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 6px rgba(59,130,246,0.4);
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 10px;
+    }
+
+    .login-btn,
+    .cancel-btn {
+      width: 50%;
+      padding: 12px;
+      border: none;
+      font-size: 17px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .login-btn {
+      background: #2563eb;
+    }
+    .login-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .cancel-btn {
+      background: #e11d48;
+    }
+    .cancel-btn:hover {
+      background: #be123c;
+    }
+
+    .forgot {
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    .forgot a {
+      font-size: 14px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./imags/OIP (2).webp" alt="Logo" />
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- LOGIN FORM SECTION -->
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+
+      <form>
+        <div class="input-field">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-field">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <!-- LOGIN + CANCEL buttons -->
+        <div class="btn-group">
+          <button type="submit" class="login-btn">Login</button>
+          <button type="button" class="cancel-btn" onclick="window.location.href='index.html'">Cancel</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-box">
+      <div class="footer-column">
+        <h2>Contact</h2>
+        <p>📞 9313062443</p>
+        <p>📧 antima25062004@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <img src="./imags/iti.jpeg" class="developer-img" />
+        <h2>Developed By</h2>
+        <p>ANTIMA DEVI</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Address</h2>
+        <p>JS ITI Varanasi</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

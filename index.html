@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website (No JS)</title>
+
+  <!-- Your external CSS file (if needed) -->
+  <link href="./style.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    .navbar {
+      width: 100%;
+      background: #222;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 45px;
+      width: 45px;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00aaff;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        background: #222;
+        width: 230px;
+        padding: 20px;
+        display: none;
+      }
+
+      .menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+    }
+
+    /* ---------------- IMAGE BANNER ---------------- */
+    .imagessection {
+      width: 100%;
+    }
+
+    .image2 {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    /* ---------------- MAIN (VIDEO + MAP) ---------------- */
+    .main {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .box {
+      flex: 1 1 calc(50% - 20px);
+      height: 320px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid #000;
+    }
+
+    .box video,
+    .box iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        flex: 1 1 100%;
+        height: 260px;
+      }
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: #1c1c1c;
+      color: white;
+      padding: 50px 20px;
+      margin-top: 40px;
+    }
+
+    .footer-box {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-column {
+      width: 30%;
+      min-width: 250px;
+      text-align: center;
+    }
+
+    .footer-column h2 {
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .developer-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00aaff;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-column {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./imags/OIP (2).webp" alt="Logo" />
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- IMAGE BANNER -->
+  <section class="imagessection">
+    <img src="./imags/jsiti" class="image2" alt="Banner Image">
+  </section>
+
+  <!-- VIDEO + MAP -->
+  <section class="main">
+    <div class="box video">
+      <video controls autoplay loop muted>
+        <source src="./video/copmuter.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="box maps">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.3459929176674!2d82.9547803!3d25.460119799999987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2a599218b8d5%3A0xc58ffc64489326c0!2sJ.S.%20Private%20Industrial%20Training%20Institute!5e0!3m2!1sen!2sin!4v1764749008256!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-box">
+      <div class="footer-column">
+        <h2>Contact</h2>
+        <p>📞 9313062443</p>
+        <p>📧 antima25062004@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <img src="./imags/iti.jpeg" class="developer-img" alt="Developer Image" />
+        <h2>Developed By</h2>
+        <p>ANTIMA DEVI</p>
+      </div>
+
+      <div class="footer-column">
+        <h2>Address</h2>
+        <p>JS ITI Varanasi</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website Updated</title>
+<link href="./style.css" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* IMAGE BANNER */
+.imagessection{
+    width:100%;
+}
+
+.image2{
+    width:100%;
+    height:auto;
+    max-height:350px;
+    object-fit:cover;
+}
+
+/* MAIN SECTION (VIDEO + MAP) */
+.main{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:20px;
+    margin-top:30px;
+    padding:15px;
+    background-color: aqua;
+}
+
+.box{
+    flex:1 1 calc(50% - 20px);
+    min-height:300px;
+    border:2px solid #000;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* Video responsive */
+.box video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Map responsive (Important Fix) */
+.box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* MOBILE VIEW FIX */
+@media (max-width: 768px) {
+    .box{
+        flex:1 1 100%;
+        min-height:250px;
+    }
+}
+/* CONTACT SECTION */
+.contact-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #eef3ff; /* light soft background */
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 450px;   /* Smaller size */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient Purple/Blue */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  color: white;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 2px solid white;
+  box-shadow: 0px 0px 8px rgba(255,255,255,0.8);
+}
+
+/* Button */
+.btn-send {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  color: #2575fc;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  background: #dce6ff;
+  color: #1e5dcc;
+}
+
+/* MOBILE FIX */
+@media (max-width: 480px) {
+  .contact-container {
+    max-width: 95%;
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./imags/OIP (2).webp" alt="Logo" />
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./about.html">About</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./register.html">Register</a></li>
+      <li><a href="./login.html">Login</a></li>
+    </ul>
+  </nav>
+
+ <section class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Feel free to send us a message. We will get back to you soon!</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit" class="btn-send">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-box">
+      <div class="footer-column">
+        <h2>Contact</h2>
+        <p>📞9313062443</p>
+        <p>📧 antima25062004@gmail.com</p>
+      </div>
+
+      <div class="footer-column">
+        <img src="./imags/iti.jpeg" class="developer-img" alt="Developer Image" />
+        <h2>Developed By</h2>
+        <p>ANTIMA DEVI</p>
+      </div>
+      <div class="footer-column">
+        <h2>Address</h2>
+        <p>JS ITI Varanasi</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
